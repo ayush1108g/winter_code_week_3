@@ -1,5 +1,5 @@
 import "./Patient Registration.css";
-export default function () {
+export default function Patient() {
   return (
     <div className="patient">
       <form action="#" method="post">
@@ -42,8 +42,8 @@ export default function () {
           </span>
         </div>
         <span id="button">
-        <button type="submit">Submit</button>
-        <button type="submit">Reset</button>
+          <button type="submit">Submit</button>
+          <button type="submit">Reset</button>
         </span>
       </form>
     </div>
