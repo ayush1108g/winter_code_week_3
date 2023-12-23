@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes, useLocation, HashRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
+
+import classes from "./App.module.css";
 // import BackImg from "./store/backimg.jpg";
 // import BackImg2 from "./store/backimg2.jpg";
 import Errorpage from "./pages/Errorpage";

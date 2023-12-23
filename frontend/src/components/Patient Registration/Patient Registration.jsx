@@ -1,6 +1,6 @@
 import "./Patient Registration.css";
-import { useState,useRef } from "react";
-export default function () {
+import { useState, useRef } from "react";
+export default function Patient() {
   const patientId = useRef();
   const firstName = useRef();
   const middleName = useRef();
@@ -14,20 +14,34 @@ export default function () {
   const region = useRef();
   const address = useRef();
   const [data, setData] = useState({});
-  function handleSave(){
+  function handleSave() {
     const patientIdValue = patientId.current.value;
     const firstNameValue = firstName.current.value;
     const middleNameValue = middleName.current.value;
     const lastNameValue = lastName.current.value;
     const dateOfBirthValue = dateOfBirth.current.value;
     const ageValue = age.current.value;
-    const genderValue=gender.current.value;
+    const genderValue = gender.current.value;
     const phoneValue = phone.current.value;
     const emailValue = email.current.value;
     const countryValue = country.current.value;
     const regionValue = region.current.value;
     const addressValue = address.current.value;
-    console.log(middleName);
+    const body = {
+      patid: patientIdValue,
+      fname: firstNameValue,
+      mname: middleNameValue,
+      lname: lastNameValue,
+      dob: dateOfBirthValue,
+      age: ageValue,
+      gender: genderValue,
+      phone: phoneValue,
+      email: emailValue,
+      country: countryValue,
+      region: regionValue,
+      address: addressValue
+    }
+    console.log(body);
   }
   return (
     <div className="patient">
@@ -71,8 +85,8 @@ export default function () {
           </span>
         </div>
         <span id="button">
-        <button type="submit" onClick={handleSave}>Submit</button>
-        <button type="submit">Reset</button>
+          <button type="submit" onClick={handleSave}>Submit</button>
+          <button type="submit">Reset</button>
         </span>
       </form>
     </div>

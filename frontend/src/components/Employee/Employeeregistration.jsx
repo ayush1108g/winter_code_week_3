@@ -1,4 +1,4 @@
-import React ,{useRef,useState} from 'react'
+import React, { useRef, useState } from 'react'
 import { useNavigate } from "react-router";
 import Input from './../../UI/input'
 import Dropdowninput from './../../UI/dropdowninput'
@@ -22,38 +22,38 @@ function Employeeregistration() {
     const country = useRef()
     const state = useRef()
     const adress = useRef()
-    const emergencyname =useRef()
+    const emergencyname = useRef()
     const emergencyphoneno = useRef()
-    const emergencyemailid= useRef()
+    const emergencyemailid = useRef()
     const emergencyaddress = useRef()
     const jobapplication = useRef();
-    const [data,setdata] = useState([])
-    function  sumbithandler(event) {
+    const [data, setdata] = useState([])
+    function sumbithandler(event) {
         event.preventDefault();
         const newdata = [
             {
-                name:name.current.value,
-                dob:dob.current.value,
-                age :age.current.value,
-                gender :gender.current.value,
-                phoneno:phoneno.current.value,
-                emailid:emailid.current.value,
+                name: name.current.value,
+                dob: dob.current.value,
+                age: age.current.value,
+                gender: gender.current.value,
+                phoneno: phoneno.current.value,
+                emailid: emailid.current.value,
                 country: country.current.value,
                 state: state.current.value,
                 adress: adress.current.value,
                 emergencyname: emergencyname.current.value,
-                emergencyphoneno:emergencyphoneno.current.value,
-                emergencyemailid:emergencyemailid.current.value,
-                emergencyaddress:emergencyaddress.current.value,
-                jobapplication:jobapplication.current.value
+                emergencyphoneno: emergencyphoneno.current.value,
+                emergencyemailid: emergencyemailid.current.value,
+                emergencyaddress: emergencyaddress.current.value,
+                jobapplication: jobapplication.current.value
 
             }
         ]
-        
+
         setdata(newdata);
-        
-      }
-      console.log(data);
+
+    }
+    console.log(data);
     return (
         <form className={`w-2/3 px-8 py-1  ${css.container}`} onSubmit={sumbithandler}>
             <h2 style={{ color: 'blue' }}>Employee Registration</h2>
@@ -63,8 +63,8 @@ function Employeeregistration() {
             <div>
                 <h2 >Employee Information</h2>
                 <Input ref={name} label="Name :-" required="required" />
-                <Input ref={dob} type ="date" label="Date of Birth" />
-                <Input ref = {age}label="Age" />
+                <Input ref={dob} type="date" label="Date of Birth" />
+                <Input ref={age} label="Age" />
                 <Dropdowninput ref={gender} label="Gender" list={[
                     { name: 'Male', code: '1' },
                     { name: 'Female', code: '2' },
@@ -73,25 +73,17 @@ function Employeeregistration() {
             </div>
             <div>
                 <h2 style={{ color: ' #ffffff' }}>Employee Address</h2>
-<<<<<<< HEAD
                 <Input ref={phoneno} label="Phone Number" />
                 <Input ref={emailid} label="Email id" />
                 <Input ref={country} label="Country" />
                 <Input ref={state} label="State" />
                 <Input ref={adress} label="Address" />
-=======
-                <Input label="Phone Number" />
-                <Input label="Email id" />
-                <Input label="Country" />
-                <Input label="State" />
-                <Input label="Address" />
->>>>>>> 9e1c912ae1f3d69bf43e9dc34963fdb4d53c3620
             </div>
             <div>
                 <h2>Emergency Address</h2>
                 <Input ref={emergencyname} label="Name" />
                 <Input ref={emergencyphoneno} label="Phone No" />
-                <Input  ref={emergencyemailid} label="Email id" />
+                <Input ref={emergencyemailid} label="Email id" />
                 <Input ref={emergencyaddress} label="Address" />
             </div>
             <div>
