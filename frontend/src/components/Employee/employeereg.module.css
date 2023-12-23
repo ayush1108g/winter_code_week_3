@@ -1,0 +1,14 @@
+.container {
+    
+}
+.container h2{
+    text-align: center;
+    font-size: x-large;
+    margin: 3%;
+    margin-left: 25%;
+    font-weight: 600;
+}
+.button{
+    align-items: center;
+    margin-left: 50%;
+}
