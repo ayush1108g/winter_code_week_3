@@ -3,7 +3,28 @@
 @tailwind utilities;
 
 body {
-  background-image: url("./store/backimg2.jpg");
-  background-repeat: no-repeat;
+  background-image: url("./store/backimg.jpg");
+  /* background-repeat: no-repeat; */
   background-size: cover;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fbfdff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #000000;
 }
