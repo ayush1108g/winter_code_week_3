@@ -73,11 +73,19 @@ function Employeeregistration() {
             </div>
             <div>
                 <h2 style={{ color: ' #ffffff' }}>Employee Address</h2>
+<<<<<<< HEAD
                 <Input ref={phoneno} label="Phone Number" />
                 <Input ref={emailid} label="Email id" />
                 <Input ref={country} label="Country" />
                 <Input ref={state} label="State" />
                 <Input ref={adress} label="Address" />
+=======
+                <Input label="Phone Number" />
+                <Input label="Email id" />
+                <Input label="Country" />
+                <Input label="State" />
+                <Input label="Address" />
+>>>>>>> 9e1c912ae1f3d69bf43e9dc34963fdb4d53c3620
             </div>
             <div>
                 <h2>Emergency Address</h2>
