@@ -4,7 +4,6 @@ import { AnimatePresence } from "framer-motion";
 
 // import BackImg from "./store/backimg.jpg";
 // import BackImg2 from "./store/backimg2.jpg";
-import classes from "./App.module.css";
 import Errorpage from "./pages/Errorpage";
 import SideBar from "./components/SideBar";
 import HomePage from "./pages/HomePage";
@@ -31,11 +30,9 @@ function RoutesWithAnimation() {
 }
 
 function App() {
-
     const screenWidth = window.screen.width;
     return (
         <HashRouter>
-
             <div className="d-none d-lg-block" style={{ position: "fixed", width: '18rem', backgroundColor: 'black' }}>
                 <SideBar />
             </div>
@@ -48,5 +45,5 @@ function App() {
             </div>
         </HashRouter>
     );
-};
+}
 export default App;
