@@ -35,7 +35,7 @@ function Employeeregistration() {
                 ]} />
             </div>
             <div>
-                <h2 style={{ color: ' #ffffff' }}>Employee Address</h2>
+                <h2>Employee Address</h2>
                 <Input label="Phone Number" />
                 <Input label="Email id" />
                 <Input label="Country" />
