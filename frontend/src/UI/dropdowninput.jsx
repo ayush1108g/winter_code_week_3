@@ -7,9 +7,8 @@ export default function Dropdowninput(props) {
     return (
         <div className={css.input}>
             <label >{props.label}</label>
-            <Dropdown  value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={props.list} optionLabel="name" 
-                 className={css.dropdown}/>
+            <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={props.list} optionLabel="name"
+                className={css.dropdown} />
         </div>
-    )
-}
-        
+    );
+};
