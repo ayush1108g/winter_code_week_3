@@ -1,5 +1,34 @@
 import "./Patient Registration.css";
+import { useState,useRef } from "react";
 export default function () {
+  const patientId = useRef();
+  const firstName = useRef();
+  const middleName = useRef();
+  const lastName = useRef();
+  const dateOfBirth = useRef();
+  const age = useRef();
+  const gender = useRef();
+  const phone = useRef();
+  const email = useRef();
+  const country = useRef();
+  const region = useRef();
+  const address = useRef();
+  const [data, setData] = useState({});
+  function handleSave(){
+    const patientIdValue = patientId.current.value;
+    const firstNameValue = firstName.current.value;
+    const middleNameValue = middleName.current.value;
+    const lastNameValue = lastName.current.value;
+    const dateOfBirthValue = dateOfBirth.current.value;
+    const ageValue = age.current.value;
+    const genderValue=gender.current.value;
+    const phoneValue = phone.current.value;
+    const emailValue = email.current.value;
+    const countryValue = country.current.value;
+    const regionValue = region.current.value;
+    const addressValue = address.current.value;
+    console.log(middleName);
+  }
   return (
     <div className="patient">
       <form action="#" method="post">
@@ -42,7 +71,7 @@ export default function () {
           </span>
         </div>
         <span id="button">
-        <button type="submit">Submit</button>
+        <button type="submit" onClick={handleSave}>Submit</button>
         <button type="submit">Reset</button>
         </span>
       </form>
