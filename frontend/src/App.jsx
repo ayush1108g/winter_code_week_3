@@ -10,8 +10,8 @@ import SideBar from "./components/SideBar";
 import HomePage from "./pages/HomePage";
 import EmployeeList from "./pages/EmployeeList";
 import EmployeeRegistration from "./components/Employee/Employeeregistration";
-import PatientRegistration from "./components/Patient Registration/Patient Registration";
 import Navbar from "./components/Navbar";
+import PatientRegistration from "./components/Patient Registration/Patient Registration";
 
 
 function RoutesWithAnimation() {
