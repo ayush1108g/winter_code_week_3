@@ -4,6 +4,10 @@
 - https://ayush1108g.github.io/winter_code_week_3/
 - FrameWorks used :- ReactJs ,NodeJs ,Express, MongoDb
 
+- Dummy Id for Login
+- email : ayush.gupta.1108@gmail.com
+- password : 12345678
+
   ### Contributers
   - Ayush Gupta
   - Pushkar Gupta
