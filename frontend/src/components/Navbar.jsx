@@ -4,7 +4,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = (params) => {
   const navigate = useNavigate();
-
+  const logoutHandler = () => {
+    localStorage.clear();
+    navigate('/login');
+  }
   return (<>
     <div className={classes.navbar}>
       <div className="dropdown" >
@@ -21,6 +24,7 @@ const Navbar = (params) => {
           <li className="dropdown-item" onClick={() => { navigate('/employeeRegistration') }}>  Employee Registration</li>
           <li className="dropdown-item" onClick={() => { navigate('/employeeList') }}>  Employee List </li>
           <li className="dropdown-item" onClick={() => { navigate('/team') }}>Team</li>
+          <li className="dropdown-item" onClick={logoutHandler} > LOGOUT</li>
           <li className="dropdown-item" > ADD PROJECT</li>
         </div>
       </div>
