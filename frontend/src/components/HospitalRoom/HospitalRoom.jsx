@@ -17,7 +17,7 @@ export default function () {
             <input type="text" id="lname" name="lname" />
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required />
-
+                
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" required />
 

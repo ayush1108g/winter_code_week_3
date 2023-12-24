@@ -35,9 +35,9 @@ function App() {
     return (
         <HashRouter>
             <div className="d-none d-lg-block" style={{ position: "fixed", width: '18rem', backgroundColor: 'black' }}>
-                {/* <SideBar /> */}
+                <SideBar />
                 {/* <Payment></Payment> */}
-                <HospitalRoom></HospitalRoom>
+                {/* <HospitalRoom></HospitalRoom> */}
             </div>
             <div className="" style={{ marginLeft: screenWidth > 992 ? '18rem' : '', height: '100dvh' }}>
                 <RoutesWithAnimation />
