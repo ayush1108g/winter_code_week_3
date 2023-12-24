@@ -13,7 +13,8 @@ import EmployeeList from "./pages/EmployeeList";
 import Employeeregistration from "./components/Employee/Employeeregistration";
 import PatientRegistration from "./components/Patient Registration/Patient Registration";
 import PatientList from "./pages/PatientList";
-
+import Payment from "./components/Payment/payment";
+import HospitalRoom from "./components/HospitalRoom/HospitalRoom";
 
 
 export const ToLink = 'http://localhost:8000';
@@ -29,6 +30,7 @@ function RoutesWithAnimation() {
                 <Route path="/employeeList" element={<EmployeeList />} />
                 <Route path="/patientRegistration" element={<PatientRegistration />} />
                 <Route path="/patientList" element={<PatientList />} />
+                <Route path="/payment" element={<Payment />}></Route>
                 <Route path="*" element={<Errorpage />} />
             </Routes>
         </AnimatePresence>
@@ -43,15 +45,18 @@ function App() {
 
             <div className="d-none d-lg-block" style={{ position: "fixed", width: '18rem', backgroundColor: 'black' }}>
                 <SideBar />
-            </div>
+            </div >
             <div className={`h1 d-flex justify-content-center ${classes.gradient}`} style={{ width: '100vw', height: 'auto', padding: '10px', zIndex: 10 }}> Hospital Data Management</div>
             <div className="navbar-expand-lg d-lg-none">
                 <Navbar />
+                {/* <SideBar /> */}
+                {/* <Payment></Payment> */}
+                <HospitalRoom></HospitalRoom>
             </div>
             <div className="" style={{ marginLeft: screenWidth > 992 ? '18rem' : '', height: '100dvh' }}>
                 <RoutesWithAnimation />
             </div>
-        </HashRouter>
+        </HashRouter >
     );
 };
 export default App;
