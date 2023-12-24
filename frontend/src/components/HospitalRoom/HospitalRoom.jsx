@@ -1,5 +1,5 @@
 import "./HospitalRoom.css";
-export default function () {
+export default function H() {
   return (
     <div id="mainHospital">
       <h1>Hospital Room</h1>
@@ -17,7 +17,7 @@ export default function () {
             <input type="text" id="lname" name="lname" />
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required />
-                
+
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" required />
 
@@ -43,13 +43,13 @@ export default function () {
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" required />
             <label htmlFor="">Signature:</label>
-            <input type="text" id="signature" name="signature"/>
+            <input type="text" id="signature" name="signature" />
           </span>
         </form>
       </div>
       <span id="buttonHos">
-      <button id="ButtonHos1"> Submit</button>
-      <button> Cancel</button>
+        <button id="ButtonHos1"> Submit</button>
+        <button> Cancel</button>
       </span>
     </div>
   );
