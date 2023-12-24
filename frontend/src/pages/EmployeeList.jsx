@@ -53,7 +53,7 @@ const EmployeeList = () => {
 
 
     return (
-        <div>
+        <div >
             <div className='h2 d-flex justify-content-center'>EmployeeList</div>
             <table className="table">
                 <thead className="thead-dark">
