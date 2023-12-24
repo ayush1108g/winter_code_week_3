@@ -20,6 +20,7 @@ const Navbar = (params) => {
           <li className="dropdown-item" onClick={() => { navigate('/payment') }}>Payment</li>
           <li className="dropdown-item" onClick={() => { navigate('/employeeRegistration') }}>  Employee Registration</li>
           <li className="dropdown-item" onClick={() => { navigate('/employeeList') }}>  Employee List </li>
+          <li className="dropdown-item" onClick={() => { navigate('/team') }}>Team</li>
           <li className="dropdown-item" > ADD PROJECT</li>
         </div>
       </div>

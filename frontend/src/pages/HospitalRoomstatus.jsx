@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { ToLink } from '../App';
 import { useNavigate } from 'react-router';
-
+import Papa from 'papaparse';
 
 const EmployeeList = () => {
     const navigate = useNavigate();
@@ -49,6 +49,24 @@ const EmployeeList = () => {
             console.log(error);
         }
     }
+    const convertToCSV = (jsonData) => {
+        const csvContent = Papa.unparse(jsonData);
+        return csvContent;
+    };
+    const downloadCSV = (jsonData) => {
+        const csvContent = convertToCSV(jsonData);
+        console.log(csvContent);
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'HospitalRoom.csv';
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+    };
 
     return (
         <div>
@@ -82,6 +100,7 @@ const EmployeeList = () => {
                     }
                 </tbody>
             </table>
+            <button onClick={() => downloadCSV(data)} type="button" className="btn btn-danger" >Download CSV</button>
             <div style={{ width: '100%', height: '15vh' }}></div>
             <div className='h2 d-flex justify-content-center'> Previous Records</div>
             <table className="table">
@@ -110,6 +129,7 @@ const EmployeeList = () => {
                     }
                 </tbody>
             </table>
+            <button onClick={() => downloadCSV(datax)} type="button" className="btn btn-danger" >Download CSV</button>
         </div>
     );
 }

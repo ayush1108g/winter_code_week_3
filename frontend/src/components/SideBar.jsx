@@ -14,7 +14,7 @@ export default function SideBar() {
           <li><Button onClick={() => { navigate('/payment') }}>Payment</Button></li>
           <li><Button onClick={() => { navigate('/employeeRegistration') }}> Employee Registration</Button></li>
           <li><Button onClick={() => { navigate('/employeeList') }}> Employee List </Button></li>
-          {/* <li><Button> ADD PROJECT</Button></li> */}
+          <li><Button onClick={() => { navigate('/team') }}>Team</Button></li>
         </ul>
       </div>
     </aside>

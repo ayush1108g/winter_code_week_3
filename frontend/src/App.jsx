@@ -16,6 +16,7 @@ import PatientList from "./pages/PatientList";
 import Payment from "./components/Payment/payment";
 import HospitalRoom from "./components/HospitalRoom/HospitalRoom";
 import HospitalRoomstatus from "./pages/HospitalRoomstatus";
+import TeamPage from "./pages/teamPage";
 
 export const ToLink = 'http://localhost:8000';
 
@@ -33,6 +34,7 @@ function RoutesWithAnimation() {
                 <Route path="/hospitalRoom/:id" element={<HospitalRoom />} />
                 <Route path="/payment" element={<Payment />}></Route>
                 <Route path="/hospitalRoomStatus" element={<HospitalRoomstatus />}></Route>
+                <Route path="/team" element={<TeamPage />} />
                 <Route path="*" element={<Errorpage />} />
             </Routes>
         </AnimatePresence>
@@ -53,7 +55,7 @@ function App() {
             <div className="navbar-expand-lg d-lg-none">
                 <Navbar />
             </div>
-            <div className="" style={{ marginLeft: screenWidth > 992 ? '24rem' : '', height: '100dvh', overflowY: 'auto' }}>
+            <div className="" style={{ marginLeft: screenWidth > 992 ? '24rem' : '2rem', height: '100dvh', overflowY: 'auto' }}>
                 <RoutesWithAnimation />
                 <div style={{ width: '100%', height: '15vh' }}></div>
             </div>
