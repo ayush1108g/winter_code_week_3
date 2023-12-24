@@ -9,8 +9,3 @@
   - Pushkar Gupta
   - Divya Kumar
 
-Team:
-![team](https://github.com/ayush1108g/winter_code_week_3/blob/main/images/TeamMembers.png)
-
-Home:
-![Home](https://github.com/ayush1108g/winter_code_week_3/blob/main/images/Home.png)
