@@ -68,7 +68,7 @@ function Employeeregistration() {
                 <h3 style={{ color: 'gold' }}>Registration Date:- <span>{formattedDate}</span></h3>
             </div>
             <div>
-                <h2 >Employee Information</h2>
+                <h2 style={{ color: 'black' }}>Employee Information</h2>
                 <Input ref={name} label="Name :-" required="required" />
                 <Input ref={dob} type="date" label="Date of Birth" />
                 <Input ref={age} label="Age" />
@@ -79,7 +79,7 @@ function Employeeregistration() {
                 ]} />
             </div>
             <div>
-                <h2 style={{ color: ' #ffffff' }}>Employee Address</h2>
+                <h2 style={{ color: 'black' }}>Employee Address</h2>
                 <Input ref={phoneno} label="Phone Number" />
                 <Input ref={emailid} label="Email id" />
                 <Input ref={country} label="Country" />
@@ -88,14 +88,14 @@ function Employeeregistration() {
 
             </div>
             <div>
-                <h2>Emergency Address</h2>
+                <h2 style={{ color: 'black' }}>Emergency Address</h2>
                 <Input ref={emergencyname} label="Name" />
                 <Input ref={emergencyphoneno} label="Phone No" />
                 <Input ref={emergencyemailid} label="Email id" />
                 <Input ref={emergencyaddress} label="Address" />
             </div>
             <div>
-                <h2>Job Application</h2>
+                <h2 style={{ color: 'black' }}>Job Application</h2>
                 <Dropdowninput ref={jobapplication} label="Job type" list={[
                     { name: 'Doctor', code: '1' },
                     { name: 'Nurse', code: '2' },

@@ -5,7 +5,7 @@ import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ToLink } from "../App";
-
+import Modal from './../UI/Modal'
 const Signin = (props) => {
   const navigate = useNavigate();
   const [errormsg, setErrormsg] = useState("");

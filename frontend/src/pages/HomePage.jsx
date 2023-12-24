@@ -28,7 +28,6 @@ const HomePage = () => {
                 accuracy. Experience the future of healthcare data management with us!</p>
             <br /><br />
         </div>
-
     )
 }
 
