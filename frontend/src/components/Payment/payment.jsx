@@ -1,5 +1,5 @@
 import "./payment.css";
-export default function () {
+export default function Payment() {
   return (
     <div>
       <h1>Payment</h1>

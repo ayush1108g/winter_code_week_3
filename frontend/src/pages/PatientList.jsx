@@ -3,7 +3,6 @@ import axios from 'axios';
 import { ToLink } from '../App';
 import { useNavigate } from 'react-router';
 
-
 const EmployeeList = () => {
     const navigate = useNavigate();
     const [data, setdata] = useState([]);
@@ -14,8 +13,8 @@ const EmployeeList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${ToLink}/employee`);
-                setdata(response.data.data.allEmployee)
+                const response = await axios.get(`${ToLink}/patient`);
+                setdata(response.data.data.allPatient)
             } catch (error) {
                 console.log(error);
             }
@@ -24,9 +23,11 @@ const EmployeeList = () => {
     }, []);
     const deleteemployee = async (idToDelete) => {
         try {
-            const response = await axios.delete(`${ToLink}/employee/${idToDelete}`);
+            // console.log(idToDelete);
+            const response = await axios.delete(`${ToLink}/patient/${idToDelete}`);
             console.log('Deleted:', response.data);
-            navigate('/employeeList');
+            // window.location.reload();
+            navigate('/patientList');
         } catch (error) {
             console.log(error);
         }
@@ -34,18 +35,18 @@ const EmployeeList = () => {
 
     return (
         <div>
-            <div className='h2 d-flex justify-content-center'>EmployeeList</div>
+            <div className='h2 d-flex justify-content-center'>Patient List</div>
             <table className="table">
                 <thead className="thead-dark">
                     <tr>
-                        <th scope="col">Employee Id</th>
+                        <th scope="col">Id</th>
                         <th scope="col">Name</th>
+                        <th scope="col">DOB</th>
                         <th scope="col">Age</th>
                         <th scope="col">Gender</th>
                         <th scope="col">Phone Number</th>
                         <th scope="col">Email id</th>
                         <th scope="col">Address</th>
-                        <th scope="col">Job Type</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -54,15 +55,15 @@ const EmployeeList = () => {
                     {
                         data.map((e) => (
                             <tr key={e._id}>
-                                <td>{e._id}</td>
+                                <td>{e.patid}</td>
                                 <td>{e.name}</td>
+                                <td>{e.dob}</td>
                                 <td>{e.age}</td>
                                 <td>{e.gender}</td>
-                                <td>{e.phoneno}</td>
-                                <td>{e.emailid}</td>
-                                <td>{e.adress}</td>
-                                <td>{e.jobapplication
-                                }</td>
+                                <td>{e.phone}</td>
+                                <td>{e.email}</td>
+                                <td>{e.address + ' ' + e.region + ' ' + e.country}</td>
+
                                 <td>
                                     <button onClick={() => deleteemployee(e._id)} type="button" className="btn btn-danger">Delete</button>
                                 </td>

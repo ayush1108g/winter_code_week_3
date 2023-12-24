@@ -15,9 +15,9 @@ const Navbar = (params) => {
         <div className="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
           <li onClick={() => { navigate('/') }} className="dropdown-item" >Welcome</li>
           <li className="dropdown-item" onClick={() => { navigate('/patientRegistration') }}> Patient Registration</li>
+          <li className="dropdown-item" onClick={() => { navigate('/patientList') }}>Patient List</li>
           <li className="dropdown-item" onClick={() => { navigate('/employeeRegistration') }}>  Employee Registration</li>
           <li className="dropdown-item" onClick={() => { navigate('/employeeList') }}>  Employee List </li>
-          <li className="dropdown-item" > ADD PROJECT</li>
           <li className="dropdown-item" > ADD PROJECT</li>
         </div>
       </div>
