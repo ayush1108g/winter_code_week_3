@@ -58,6 +58,10 @@ const patientSchema = new mongoose.Schema({
     type: String,
     required: [true, "Address is required"],
   },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 const Patient = mongoose.model("Patient", patientSchema);

@@ -47,6 +47,8 @@ const EmployeeList = () => {
                         <th scope="col">Address</th>
                         <th scope="col">Job Type</th>
                         <th scope="col">Action</th>
+                        <td style={{ background: 'none' }}></td>
+
                     </tr>
                 </thead>
                 <tbody>

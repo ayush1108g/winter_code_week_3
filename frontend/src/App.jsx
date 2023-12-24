@@ -15,7 +15,7 @@ import PatientRegistration from "./components/Patient Registration/Patient Regis
 import PatientList from "./pages/PatientList";
 import Payment from "./components/Payment/payment";
 import HospitalRoom from "./components/HospitalRoom/HospitalRoom";
-
+import HospitalRoomstatus from "./pages/HospitalRoomstatus";
 
 export const ToLink = 'http://localhost:8000';
 
@@ -30,7 +30,9 @@ function RoutesWithAnimation() {
                 <Route path="/employeeList" element={<EmployeeList />} />
                 <Route path="/patientRegistration" element={<PatientRegistration />} />
                 <Route path="/patientList" element={<PatientList />} />
+                <Route path="/hospitalRoom/:id" element={<HospitalRoom />} />
                 <Route path="/payment" element={<Payment />}></Route>
+                <Route path="/hospitalRoomStatus" element={<HospitalRoomstatus />}></Route>
                 <Route path="*" element={<Errorpage />} />
             </Routes>
         </AnimatePresence>
@@ -40,6 +42,7 @@ function RoutesWithAnimation() {
 function App() {
 
     const screenWidth = window.screen.width;
+    console.log(screenWidth);
     return (
         <HashRouter>
 
@@ -49,12 +52,10 @@ function App() {
             <div className={`h1 d-flex justify-content-center ${classes.gradient}`} style={{ width: '100vw', height: 'auto', padding: '10px', zIndex: 10 }}> Hospital Data Management</div>
             <div className="navbar-expand-lg d-lg-none">
                 <Navbar />
-                {/* <SideBar /> */}
-                {/* <Payment></Payment> */}
-                {/* <HospitalRoom></HospitalRoom> */}
             </div>
-            <div className="" style={{ marginLeft: screenWidth > 992 ? '18rem' : '', height: '100dvh' }}>
+            <div className="" style={{ marginLeft: screenWidth > 992 ? '24rem' : '', height: '100dvh', overflowY: 'auto' }}>
                 <RoutesWithAnimation />
+                <div style={{ width: '100%', height: '15vh' }}></div>
             </div>
         </HashRouter >
     );

@@ -62,7 +62,7 @@ function Employeeregistration() {
     }
     console.log(data);
     return (
-        <form className={`w-2/3 px-8 py-1  ${css.container}`} onSubmit={sumbithandler}>
+        <form className={`px-8 py-1  ${css.container}`} onSubmit={sumbithandler}>
             <h2 style={{ color: 'blue' }}>Employee Registration</h2>
             <div>
                 <h3 style={{ color: 'gold' }}>Registration Date:- <span>{formattedDate}</span></h3>

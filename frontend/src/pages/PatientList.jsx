@@ -26,7 +26,6 @@ const EmployeeList = () => {
             // console.log(idToDelete);
             const response = await axios.delete(`${ToLink}/patient/${idToDelete}`);
             console.log('Deleted:', response.data);
-            // window.location.reload();
             navigate('/patientList');
         } catch (error) {
             console.log(error);
@@ -48,6 +47,7 @@ const EmployeeList = () => {
                         <th scope="col">Email id</th>
                         <th scope="col">Address</th>
                         <th scope="col">Action</th>
+                        <td style={{ background: 'none' }}></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,6 +65,7 @@ const EmployeeList = () => {
                                 <td>{e.address + ' ' + e.region + ' ' + e.country}</td>
 
                                 <td>
+                                    <button onClick={() => navigate(`/hospitalRoom/${e._id}`)} type="button" className="btn btn-primary">Book Room</button>
                                     <button onClick={() => deleteemployee(e._id)} type="button" className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>

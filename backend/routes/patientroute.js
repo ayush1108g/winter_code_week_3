@@ -8,5 +8,8 @@ router
   .get(patientcontroller.getallPatients)
   .post(patientcontroller.createPatient);
 
-router.route("/patient/:id").delete(patientcontroller.deletePatient);
+router
+  .route("/patient/:id")
+  .get(patientcontroller.getbyid)
+  .delete(patientcontroller.deletePatient);
 module.exports = router;

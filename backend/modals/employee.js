@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 // name: name.current.value,
 //                 dob: dob.current.value,
 //                 age: age.current.value,
@@ -14,68 +14,72 @@ const mongoose = require('mongoose');
 //                 emergencyaddress: emergencyaddress.current.value,
 //                 jobapplication: jobapplication.current.value
 const employeeSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, 'Name is required'],
-        unique: true,
-        trim: true
-    },
-    dob: {
-        type: String,
-        required: [true, 'DOB is required'],
-    },
-    age: {
-        type: Number,
-        required: [true, 'DOB is required'],
-    },
-    gender: {
-        type: String,
-        trim: true,
-        required: [true, 'Gender is required'],
-    },
-    phoneno: {
-        type: Number,
-        required: true,
-    },
-    emailid: {
-        type: String,
-        required: [true, 'email id']
-    },
-    country: {
-        type: String,
-        required: [true, 'country is required']
-    },
+  name: {
+    type: String,
+    required: [true, "Name is required"],
+    unique: true,
+    trim: true,
+  },
+  dob: {
+    type: String,
+    required: [true, "DOB is required"],
+  },
+  age: {
+    type: Number,
+    required: [true, "DOB is required"],
+  },
+  gender: {
+    type: String,
+    trim: true,
+    required: [true, "Gender is required"],
+  },
+  phoneno: {
+    type: Number,
+    required: true,
+  },
+  emailid: {
+    type: String,
+    required: [true, "email id"],
+  },
+  country: {
+    type: String,
+    required: [true, "country is required"],
+  },
 
-    state: {
-        type: String,
-        required: true
-    },
-    adress: {
-        type: String,
-        required: true
-    },
-    emergencyname: {
-        type: String,
-        required: true
-    },
-    emergencyphoneno: {
-        type: String,
-        required: true
-    },
-    emergencyemailid: {
-        type: String,
-        required: true
-    },
-    emergencyaddress: {
-        type: String,
-        required: true
-    },
-    jobapplication: {
-        type: String,
-        required: true
-    }
+  state: {
+    type: String,
+    required: true,
+  },
+  adress: {
+    type: String,
+    required: true,
+  },
+  emergencyname: {
+    type: String,
+    required: true,
+  },
+  emergencyphoneno: {
+    type: String,
+    required: true,
+  },
+  emergencyemailid: {
+    type: String,
+    required: true,
+  },
+  emergencyaddress: {
+    type: String,
+    required: true,
+  },
+  jobapplication: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
-const Employee = mongoose.model('Employee', employeeSchema);
+const Employee = mongoose.model("Employee", employeeSchema);
 
 module.exports = Employee;
