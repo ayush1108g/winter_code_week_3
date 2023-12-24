@@ -234,7 +234,7 @@ const Signin = (props) => {
               title="Password must be at least 8 characters long"
               required
             />
-            <span className="input-group-text" onClick={handleTogglePassword}>
+            <span className="input-group-text" style={{ marginBottom: '40px' }} onClick={handleTogglePassword}>
               {showPassword ? <RiEyeOffFill /> : <RiEyeFill />}
             </span>
           </div>
