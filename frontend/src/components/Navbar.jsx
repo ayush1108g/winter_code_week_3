@@ -25,7 +25,6 @@ const Navbar = (params) => {
           <li className="dropdown-item" onClick={() => { navigate('/employeeList') }}>  Employee List </li>
           <li className="dropdown-item" onClick={() => { navigate('/team') }}>Team</li>
           <li className="dropdown-item" onClick={logoutHandler} > LOGOUT</li>
-          <li className="dropdown-item" > ADD PROJECT</li>
         </div>
       </div>
     </div >
