@@ -1,4 +1,4 @@
-#mainPayment {
+#mainHospital {
     margin-top: 7rem;
     margin-bottom: 3rem;
     margin-left: 23rem;
@@ -9,12 +9,22 @@
     width: 90rem;
     height: 66rem;
 }
-#payment{
+#Hospital{
     
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#button{
+.hospitalForm1{
+    margin-right: 3rem;
+}
+#buttonHos{
     border-radius: 3px;
+}
+#ButtonHos1{
+    border-radius: 3px;
+    margin-left: 60rem;
+}
+input{
+    width: 30rem;
 }

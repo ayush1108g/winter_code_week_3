@@ -10,7 +10,8 @@ import HomePage from "./pages/HomePage";
 import EmployeeList from "./pages/EmployeeList";
 import Employeeregistration from "./components/Employee/Employeeregistration";
 import PatientRegistration from "./components/Patient Registration/Patient Registration";
-
+import Payment from "./components/Payment/payment";
+import HospitalRoom from "./components/HospitalRoom/HospitalRoom";
 
 function RoutesWithAnimation() {
     const location = useLocation();
@@ -22,6 +23,7 @@ function RoutesWithAnimation() {
                 <Route path="/employeeRegistration" element={<Employeeregistration />} />
                 <Route path="/employeeList" element={<EmployeeList />} />
                 <Route path="/patientRegistration" element={<PatientRegistration />} />
+                <Route path="/payment" element={<Payment/>}></Route>
                 <Route path="*" element={<Errorpage />} />
             </Routes>
         </AnimatePresence>
@@ -33,8 +35,9 @@ function App() {
     return (
         <HashRouter>
             <div className="d-none d-lg-block" style={{ position: "fixed", width: '18rem', backgroundColor: 'black' }}>
-                <SideBar />
-                {/* <PatientRegistration></PatientRegistration> */}
+                {/* <SideBar /> */}
+                {/* <Payment></Payment> */}
+                <HospitalRoom></HospitalRoom>
             </div>
             <div className="" style={{ marginLeft: screenWidth > 992 ? '18rem' : '', height: '100dvh' }}>
                 <RoutesWithAnimation />
